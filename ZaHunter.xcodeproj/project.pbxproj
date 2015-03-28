@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5627D5B81AC74BD9001FBCAC /* Pizzeria.m in Sources */ = {isa = PBXBuildFile; fileRef = 5627D5B71AC74BD9001FBCAC /* Pizzeria.m */; };
 		563E84DD1AC34A7600E52A54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 563E84DC1AC34A7600E52A54 /* main.m */; };
 		563E84E01AC34A7600E52A54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 563E84DF1AC34A7600E52A54 /* AppDelegate.m */; };
 		563E84E31AC34A7600E52A54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563E84E21AC34A7600E52A54 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5627D5B61AC74BD9001FBCAC /* Pizzeria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pizzeria.h; sourceTree = "<group>"; };
+		5627D5B71AC74BD9001FBCAC /* Pizzeria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pizzeria.m; sourceTree = "<group>"; };
 		563E84D71AC34A7600E52A54 /* ZaHunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZaHunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563E84DB1AC34A7600E52A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		563E84DC1AC34A7600E52A54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +72,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5627D5B91AC74BE4001FBCAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5627D5B61AC74BD9001FBCAC /* Pizzeria.h */,
+				5627D5B71AC74BD9001FBCAC /* Pizzeria.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5627D5BA1AC74BF0001FBCAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				563E84E11AC34A7600E52A54 /* ViewController.h */,
+				563E84E21AC34A7600E52A54 /* ViewController.m */,
+				563E85001AC3577700E52A54 /* MapViewController.h */,
+				563E85011AC3577700E52A54 /* MapViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		563E84CE1AC34A7500E52A54 = {
 			isa = PBXGroup;
 			children = (
@@ -91,15 +114,12 @@
 		563E84D91AC34A7600E52A54 /* ZaHunter */ = {
 			isa = PBXGroup;
 			children = (
+				563E84E41AC34A7600E52A54 /* Main.storyboard */,
+				563E84E91AC34A7600E52A54 /* LaunchScreen.xib */,
 				563E84DE1AC34A7600E52A54 /* AppDelegate.h */,
 				563E84DF1AC34A7600E52A54 /* AppDelegate.m */,
-				563E84E11AC34A7600E52A54 /* ViewController.h */,
-				563E84E21AC34A7600E52A54 /* ViewController.m */,
-				563E85001AC3577700E52A54 /* MapViewController.h */,
-				563E85011AC3577700E52A54 /* MapViewController.m */,
-				563E84E41AC34A7600E52A54 /* Main.storyboard */,
-				563E84E71AC34A7600E52A54 /* Images.xcassets */,
-				563E84E91AC34A7600E52A54 /* LaunchScreen.xib */,
+				5627D5B91AC74BE4001FBCAC /* Model */,
+				5627D5BA1AC74BF0001FBCAC /* Controller */,
 				563E84DA1AC34A7600E52A54 /* Supporting Files */,
 			);
 			path = ZaHunter;
@@ -108,6 +128,7 @@
 		563E84DA1AC34A7600E52A54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				563E84E71AC34A7600E52A54 /* Images.xcassets */,
 				563E84DB1AC34A7600E52A54 /* Info.plist */,
 				563E84DC1AC34A7600E52A54 /* main.m */,
 			);
@@ -242,6 +263,7 @@
 			files = (
 				563E84E31AC34A7600E52A54 /* ViewController.m in Sources */,
 				563E84E01AC34A7600E52A54 /* AppDelegate.m in Sources */,
+				5627D5B81AC74BD9001FBCAC /* Pizzeria.m in Sources */,
 				563E84DD1AC34A7600E52A54 /* main.m in Sources */,
 				563E85021AC3577700E52A54 /* MapViewController.m in Sources */,
 			);
@@ -434,6 +456,7 @@
 				563E84FC1AC34A7600E52A54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		563E84FD1AC34A7600E52A54 /* Build configuration list for PBXNativeTarget "ZaHunterTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +465,7 @@
 				563E84FF1AC34A7600E52A54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
