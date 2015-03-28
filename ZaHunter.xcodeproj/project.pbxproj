@@ -14,6 +14,9 @@
 		563E84E81AC34A7600E52A54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563E84E71AC34A7600E52A54 /* Images.xcassets */; };
 		563E84EB1AC34A7600E52A54 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563E84E91AC34A7600E52A54 /* LaunchScreen.xib */; };
 		563E84F71AC34A7600E52A54 /* ZaHunterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 563E84F61AC34A7600E52A54 /* ZaHunterTests.m */; };
+		563E85021AC3577700E52A54 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563E85011AC3577700E52A54 /* MapViewController.m */; };
+		563E85041AC366E500E52A54 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563E85031AC366E500E52A54 /* MapKit.framework */; };
+		563E85061AC366EB00E52A54 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563E85051AC366EB00E52A54 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		563E84F01AC34A7600E52A54 /* ZaHunterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZaHunterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		563E84F51AC34A7600E52A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		563E84F61AC34A7600E52A54 /* ZaHunterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZaHunterTests.m; sourceTree = "<group>"; };
+		563E85001AC3577700E52A54 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		563E85011AC3577700E52A54 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		563E85031AC366E500E52A54 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		563E85051AC366EB00E52A54 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563E85061AC366EB00E52A54 /* CoreLocation.framework in Frameworks */,
+				563E85041AC366E500E52A54 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,7 @@
 				563E84D91AC34A7600E52A54 /* ZaHunter */,
 				563E84F31AC34A7600E52A54 /* ZaHunterTests */,
 				563E84D81AC34A7600E52A54 /* Products */,
+				563E85071AC366F200E52A54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +95,8 @@
 				563E84DF1AC34A7600E52A54 /* AppDelegate.m */,
 				563E84E11AC34A7600E52A54 /* ViewController.h */,
 				563E84E21AC34A7600E52A54 /* ViewController.m */,
+				563E85001AC3577700E52A54 /* MapViewController.h */,
+				563E85011AC3577700E52A54 /* MapViewController.m */,
 				563E84E41AC34A7600E52A54 /* Main.storyboard */,
 				563E84E71AC34A7600E52A54 /* Images.xcassets */,
 				563E84E91AC34A7600E52A54 /* LaunchScreen.xib */,
@@ -117,6 +129,15 @@
 				563E84F51AC34A7600E52A54 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		563E85071AC366F200E52A54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				563E85051AC366EB00E52A54 /* CoreLocation.framework */,
+				563E85031AC366E500E52A54 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +243,7 @@
 				563E84E31AC34A7600E52A54 /* ViewController.m in Sources */,
 				563E84E01AC34A7600E52A54 /* AppDelegate.m in Sources */,
 				563E84DD1AC34A7600E52A54 /* main.m in Sources */,
+				563E85021AC3577700E52A54 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
