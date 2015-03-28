@@ -11,6 +11,7 @@
 #import "Pizzeria.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *switchSegmentControl;
 @property IBOutlet UITableView *tableView;
 @property CLLocationManager *locationManager;

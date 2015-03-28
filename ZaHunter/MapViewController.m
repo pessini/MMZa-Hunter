@@ -40,13 +40,16 @@
     self.mapView.showsUserLocation = YES;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     [self.mapView showAnnotations:self.mapView.annotations animated:YES];
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
     Pizzeria *newAnnotation = annotation;
-    if (annotation == mapView.userLocation) {
+    if (annotation == mapView.userLocation)
+    {
         return nil;
     }
 
@@ -59,15 +62,18 @@
     return pin;
 }
 
-- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
-    if ([overlay isKindOfClass:[MKPolyline class]]) {
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MKPolyline class]])
+    {
         MKPolyline *route = overlay;
         MKPolylineRenderer *rendered = [[MKPolylineRenderer alloc] initWithPolyline:route];
         rendered.strokeColor = [UIColor colorWithRed:0.99 green:0.55 blue:0.31 alpha:1.00];
         rendered.lineWidth = 5.0;
         return rendered;
     }
-    else {
+    else
+    {
         return nil;
     }
 }
