@@ -94,6 +94,9 @@
                             <constraint firstItem="mFW-ST-KdV" firstAttribute="leading" secondItem="zuh-yI-deC" secondAttribute="leadingMargin" constant="-16" id="dKL-am-IKg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="mFW-ST-KdV" id="Siq-s2-d4W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElF-SS-agM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

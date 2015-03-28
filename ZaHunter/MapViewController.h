@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Pizzeria.h"
 
 
 @interface MapViewController : ViewController
 
-@property NSString *name;
+@property NSMutableArray *pizzerias;
+@property Pizzeria *mapPizzeria;
+@property CLLocation *userLocation;
 
 @end

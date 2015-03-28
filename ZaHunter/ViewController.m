@@ -223,8 +223,11 @@
 {
     if ([segue.identifier isEqualToString:@"ShowMap"])
     {
-        MapViewController *mapVC = segue.destinationViewController;
-        mapVC.name = self.navigationItem.title;
+        MapViewController *vc = segue.destinationViewController;
+        vc.mapPizzeria = self.mainPizzeria;
+        vc.userLocation = self.userLocation;
+        vc.pizzerias = self.pizzeriaArray;
+        vc.mapPizzeria.placemark = self.mainPizzeria.placemark;
     }
 }
 
