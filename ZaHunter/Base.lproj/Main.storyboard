@@ -17,31 +17,58 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="c0v-1i-jkw">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uVF-0K-EcM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PizzaCell" id="AXV-XK-Ets">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PizzaCell" textLabel="1kZ-dw-52o" detailTextLabel="Rxr-xg-F5K" style="IBUITableViewCellStyleValue1" id="vvJ-xd-KC1">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AXV-XK-Ets" id="SdQ-ln-s0N">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vvJ-xd-KC1" id="MI4-V5-C9N">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1kZ-dw-52o">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rxr-xg-F5K">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boX-Nc-gps">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="A90-8v-mng"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="c0v-1i-jkw" secondAttribute="bottom" id="LOi-dJ-nh6"/>
-                            <constraint firstItem="c0v-1i-jkw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="dRc-O2-KRX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c0v-1i-jkw" secondAttribute="trailing" constant="-16" id="net-rN-GlA"/>
-                            <constraint firstItem="c0v-1i-jkw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="p4B-bb-f8l"/>
+                            <constraint firstItem="boX-Nc-gps" firstAttribute="top" secondItem="uVF-0K-EcM" secondAttribute="bottom" id="Cnw-Nw-iI4"/>
+                            <constraint firstItem="boX-Nc-gps" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="E31-4b-sSj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="boX-Nc-gps" secondAttribute="trailing" constant="-16" id="Qdy-N4-vL9"/>
+                            <constraint firstItem="uVF-0K-EcM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="a1x-iB-jD3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="boX-Nc-gps" secondAttribute="bottom" id="apk-Ce-riM"/>
+                            <constraint firstItem="boX-Nc-gps" firstAttribute="top" secondItem="uVF-0K-EcM" secondAttribute="bottom" id="c8v-I9-Qsq"/>
+                            <constraint firstItem="uVF-0K-EcM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="jJD-51-hlb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uVF-0K-EcM" secondAttribute="trailing" constant="-16" id="kLG-gS-FWo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="🍕 Pizza 🍕" id="Kxc-bX-L3G">
-                        <barButtonItem key="leftBarButtonItem" id="8Jl-MI-TML">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="5oQ-vN-re1">
+                    <navigationItem key="navigationItem" title="🍕 Pizza 🍕" id="0Cx-u2-ja9">
+                        <barButtonItem key="leftBarButtonItem" id="b6g-ER-LH8">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="iol-jX-Z3T">
                                 <rect key="frame" x="-61" y="-14" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -50,20 +77,21 @@
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="onTransportTypeSelected:" destination="vXZ-lx-hvc" eventType="valueChanged" id="YAX-Pw-Ssq"/>
+                                    <action selector="onTransportTypeSelected:" destination="vXZ-lx-hvc" eventType="valueChanged" id="c0F-8S-qap"/>
                                 </connections>
                             </segmentedControl>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="globe" id="ty4-za-u2Y">
+                        <barButtonItem key="rightBarButtonItem" image="globe" id="NoR-uy-erk">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="w8e-eX-MXd" kind="show" identifier="ShowMap" id="VNU-bB-KvI"/>
+                                <segue destination="w8e-eX-MXd" kind="show" identifier="ShowMap" id="DAH-tl-rWe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="switchSegmentControl" destination="5oQ-vN-re1" id="jl7-vh-v7E"/>
-                        <outlet property="tableView" destination="c0v-1i-jkw" id="cUo-BR-b2w"/>
+                        <outlet property="footerTextView" destination="boX-Nc-gps" id="pOX-Cr-tB4"/>
+                        <outlet property="switchSegmentControl" destination="iol-jX-Z3T" id="kpL-wV-0cN"/>
+                        <outlet property="tableView" destination="uVF-0K-EcM" id="cpa-2C-4wc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -73,7 +101,7 @@
         <!--Map View Controller-->
         <scene sceneID="Dsf-f8-rjV">
             <objects>
-                <viewController id="w8e-eX-MXd" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController title="Map" id="w8e-eX-MXd" userLabel="Map View Controller" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZKe-HW-9o9"/>
                         <viewControllerLayoutGuide type="bottom" id="GLB-hq-ugw"/>

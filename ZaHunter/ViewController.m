@@ -14,15 +14,15 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *switchSegmentControl;
 @property IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextView *footerTextView;
+
 @property CLLocationManager *locationManager;
 @property NSMutableString *directionSting;
 @property NSMutableArray *pizzeriaArray;
 @property NSTimeInterval timeToLocation;
 @property CLLocation *userLocation;
 @property Pizzeria *mainPizzeria;
-@property UITextView *footerTextView;
 @property NSString *ratingString;
-@property UILabel *foterLabel;
 
 @end
 
@@ -37,8 +37,8 @@
     self.tableView.dataSource = self;
 
     self.pizzeriaArray = [NSMutableArray new];
-    self.foterLabel = [UILabel new];
     [self loadUserLocation];
+    [self setTextView];
 }
 
 #pragma mark -UITableViewDataSource
@@ -60,7 +60,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PizzaCell"];
     Pizzeria *pizzeria = [self.pizzeriaArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", pizzeria.mapItem.name];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f Km", pizzeria.locationDistance];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f MI", pizzeria.locationDistance];
     return cell;
 }
 
@@ -68,15 +68,7 @@
 {
     UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 3)];
     footer.backgroundColor = [UIColor colorWithRed:0.01 green:0.47 blue:0.26 alpha:1.00];
-    self.footerTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.tableFooterView.frame.size.height)];
-    self.footerTextView.backgroundColor = [UIColor clearColor];
-    self.footerTextView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    self.footerTextView.textAlignment = NSTextAlignmentLeft;
-    self.footerTextView.textColor = [UIColor colorWithRed:0.01 green:0.47 blue:0.26 alpha:1.00];
-    self.footerTextView.font = [UIFont fontWithName:@"Avenir-Roman" size:14];
-    self.footerTextView.text = @"";
-    [self.footerTextView addSubview:footer];
-    return self.footerTextView;
+    return footer;
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -207,6 +199,18 @@
     {
         NSLog(@"directions: %@", route.steps);
     }
+}
+
+#pragma mark - UITextView
+
+-(void)setTextView
+{
+    self.footerTextView.backgroundColor = [UIColor clearColor];
+    self.footerTextView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    self.footerTextView.textAlignment = NSTextAlignmentLeft;
+    self.footerTextView.textColor = [UIColor colorWithRed:0.01 green:0.47 blue:0.26 alpha:1.00];
+    self.footerTextView.font = [UIFont fontWithName:@"Avenir-Roman" size:14];
+    self.footerTextView.text = @"";
 }
 
 #pragma mark - Actions
